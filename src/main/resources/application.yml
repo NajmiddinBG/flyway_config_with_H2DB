@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:~/data/migration_flyway
+    username: friday
+    password: 1113
+    driverClassName: org.h2.Driver
+  flyway:
+#    locations: classpath:resources/db/migration
+    baseline-on-migrate: true
+    enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    database: H2
+  #    show-sql: true
+#    hibernate:
+#      ddl-auto: create
+#    defer-datasource-initialization: true
+
+  h2:
+    console:
+      enabled: true
+server:
+  port: 8882
